@@ -30,6 +30,16 @@ function RouterConfig({ history, app }) {
         });
       },
     },
+    {
+      path: '/photos',
+      name: 'PhotosPage',
+      getComponent(nextState, cb) {
+        require.ensure([], (require) => {
+          registerModel(app, require('./models/photos'));
+          cb(null, require('./routes/Photos'));
+        });
+      },
+    },
   ];
 
   return <Router history={history} routes={routes} />;

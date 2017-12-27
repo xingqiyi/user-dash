@@ -8,14 +8,14 @@ import MainLayout from '../components/MainLayout/MainLayout';
 function Photos({ location }) {
   return (
 
-      <MainLayout location={location}>
-          <div className={styles.normal}>
-              <PhotosComponent />
-            </div>
-        </MainLayout>
+    <MainLayout location={location}>
+      <div className={styles.normal}>
+        <PhotosComponent />
+      </div>
+    </MainLayout>
 
 
-    );
+  );
 }
 
 export default connect()(Photos);

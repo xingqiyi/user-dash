@@ -30,6 +30,7 @@ function Photos({ dispatch, list, total, page: currentPage }) {
       }
 
       <Pagination
+        showQuickJumper
         total={total}
         current={currentPage}
         pageSize={PHOTO_PAGE_SIZE}
